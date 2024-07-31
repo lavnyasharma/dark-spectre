@@ -8409,6 +8409,7 @@ strong {
     bottom: 0;
     content: '';
     opacity: .5;
+    background: #000;
      }
 
 .slider-text {
