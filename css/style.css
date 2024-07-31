@@ -8409,7 +8409,7 @@ strong {
     bottom: 0;
     content: '';
     opacity: .5;
-    background: #000; }
+     }
 
 .slider-text {
   position: relative;
@@ -9832,3 +9832,47 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    .logo-slider {
+      width: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+      
+  }
+  
+  .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: slide 20s infinite linear;
+  }
+  
+  .slide {
+      flex: 0 0 auto;
+      width: 150px;
+      margin: 0 10px;
+  }
+  
+  .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+  }
+  
+  @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-150px * 4)); } /* Adjust based on the number of logos */
+  }
+  
+  @media (max-width: 768px) {
+      .slide {
+          width: 100px; /* Adjust size for smaller screens */
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .slide {
+          width: 80px; /* Further adjust size for mobile screens */
+      }
+  }
