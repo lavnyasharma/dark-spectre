@@ -103,9 +103,32 @@
     			<div class="col-md-6 col-lg-6 d-flex">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
-	    				<div class="img img-video d-flex align-self-stretch align-items-center" style="background-image:url(https://ewsorupyhavslsemnmhd.supabase.co/storage/v1/object/public/car-images/Screenshot%202024-09-24%20at%204.41.46%20AM.png);">
-	    					
-	    				</div>
+	    				<div class="img img-video d-flex align-self-stretch align-items-center" id="imageContainer" style="background-image:url('https://ewsorupyhavslsemnmhd.supabase.co/storage/v1/object/public/car-images/Screenshot%202024-09-24%20at%204.41.46%20AM.png'); background-size: cover; transition: opacity 2s ease;">
+						</div>
+						
+						<script>
+						  var images = [
+							'https://ewsorupyhavslsemnmhd.supabase.co/storage/v1/object/public/car-images/Screenshot%202024-09-24%20at%204.41.46%20AM.png',
+							'https://ewsorupyhavslsemnmhd.supabase.co/storage/v1/object/public/car-images/0M1A4585.jpg',
+							'https://ewsorupyhavslsemnmhd.supabase.co/storage/v1/object/public/car-images/0M1A6754-2.jpg',
+						
+						  ];
+						
+						  var currentImageIndex = 0;
+						  var container = document.getElementById('imageContainer');
+						
+						  function fadeImage() {
+							container.style.opacity = 0;
+							setTimeout(function() {
+							  currentImageIndex = (currentImageIndex + 1) % images.length;
+							  container.style.backgroundImage = 'url(' + images[currentImageIndex] + ')';
+							  container.style.opacity = 1;
+							}, 500); // 500ms for the fade-out transition
+						  }
+						
+						  setInterval(fadeImage, 3000); // Change image every 3 seconds
+						</script>
+						
     				</div>
     			</div>
     			<div class="col-md-6 col-lg-6 pl-md-5">
@@ -128,7 +151,7 @@
 	              <div class="text">
 	              	<p class="mb-4" style="margin: 0;">
 		                <span class="number" data-number="40">0</span>
-		                <span style="font-size: 12px;">Project complete</span>
+		                <span style="font-size: 12px;">Projects completed</span>
 	                </p>
 	              </div>
 		          </div>
@@ -163,7 +186,7 @@
 		        		<div class="media block-6 services d-block ftco-animate">
 		              <div class="icon"><span class="flaticon-video-camera"></span></div>
 		              <div class="media-body">
-		                <h3 class="heading mb-3">Video Production</h3>
+		                <h3 class="heading mb-3">Video Production and Photography</h3>
 		                <p>Our team is specialized in creating high-quality video content that captivates and inspires. Whether you're looking to promote your products, share your brand's message, or create compelling visual stories, our experts are here to bring your vision to life..</p>
 		              </div>
 		            </div> 
